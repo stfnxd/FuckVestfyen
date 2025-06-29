@@ -1,0 +1,87 @@
+body {
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stickman {
+    position: relative;
+    width: 200px;
+    height: 400px;
+  }
+  
+  .head {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 1;
+  }
+  
+  .body {
+    position: absolute;
+    top: 120px;
+    left: 99px;
+    width: 2px;
+    height: 120px;
+    background-color: white;
+  }
+  
+  .arms {
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    width: 120px;
+    height: 2px;
+    background-color: white;
+  }
+  
+  .legs::before,
+  .legs::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    top: 240px;
+  }
+  
+  .legs::before {
+    left: 60px;
+    transform: rotate(30deg);
+  }
+  
+  .legs::after {
+    left: 138px;
+    transform: rotate(-30deg);
+  }
+  
+  .fire {
+    display: none;
+    position: absolute;
+    top: -30px;         /* lidt op, så det dækker hoved og krop */
+    left: -95px;        /* skub ilden til venstre for at centrere over figuren */
+    width: 390px;       /* ny bredde */
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .burning .fire {
+    display: block;
+  }
+  
